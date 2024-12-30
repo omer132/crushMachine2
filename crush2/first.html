@@ -1,0 +1,126 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="first.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <title>omer</title>
+    <style>
+        .tenor-gif-embed {
+            display: none;
+            width: 50%; 
+            max-width: 50px; 
+            height: auto;
+            position: absolute;
+            left: -80px;
+            top: 310px;
+            pointer-events: none;
+        }
+        .giphy-embed, .spiderman, .j {
+
+            display: none;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tenor-gif-embed" data-postid="14404274" data-share-method="host" data-aspect-ratio="0.84" data-width="100%">
+        <a href="https://tenor.com/view/click-subscribe-pointing-up-one-point-gif-14404274"></a>
+        <a href="https://tenor.com/search/click-stickers"></a>
+    </div> 
+
+<div class="baslik">
+<h1>HI CRUSH</h1>
+<h3>Do you like me?</h3>
+</div>
+<div class="btn">
+    <form action="second.html">
+        <div class="yes">
+            <input id="ys" type="submit" value="Yes:):):)">
+        </div>
+    </form>
+    <div class="no">
+        <input id="n" type="submit" value="no" onclick="moveButton()">
+    </div>
+    
+    <iframe src="https://giphy.com/embed/iJJ6E58EttmFqgLo96" width="384" height="480"  frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/moodman-iJJ6E58EttmFqgLo96"></a></p>
+
+    <iframe src="https://giphy.com/embed/DUu5TWUWVZBkI" width="480" height="394"  frameBorder="0" class="spiderman" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/walking-episode-within-DUu5TWUWVZBkI"></a></p>
+
+    <iframe src="https://giphy.com/embed/a9xhxAxaqOfQs" width="480" height="264"  frameBorder="0" class="j" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/sad-a9xhxAxaqOfQs"></a></p>
+    
+    
+    
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    
+    <script>
+        let sayac = 0;
+        function moveButton() {
+            sayac++; 
+            
+            const button = document.getElementById('n');
+            const but = document.getElementById('ys');
+            const gif=document.querySelector('.giphy-embed');
+            const giff=document.querySelector('.spiderman');
+            const gifff=document.querySelector('.j');
+            const giffff=document.querySelector('.tenor-gif-embed')
+
+            const x = Math.random() * (window.innerWidth - button.offsetWidth);
+            const y = Math.random() * (window.innerHeight - button.offsetHeight);
+            button.style.position = 'absolute';
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+            
+            
+
+            
+
+            if(sayac==2){
+                giffff.style.display="block";
+            }
+
+
+            if (sayac <= 3) { 
+                but.style.position = 'absolute';
+                but.style.width = but.offsetWidth + 20
+                but.style.height = but.offsetHeight + 20 
+                
+                if(sayac==2){
+                    gif.style.display = "block";
+                }
+
+            }
+
+            if(sayac ==4){
+                giff.style.display = "block";
+            }
+
+            if(sayac==5){
+                gifff.style.display = "block";
+            }
+
+            if(sayac>=6){
+                document.getElementById('n').addEventListener('click', function() {
+                        for (let i = 0; i < 30; i++) {
+                            var clone = this.cloneNode(true); 
+                            const x = Math.random() * ((window.innerWidth-150) - clone.offsetWidth); 
+                            const y = Math.random() * ((window.innerHeight-150)- clone.offsetHeight); 
+                            clone.style.position = 'absolute';
+                            clone.style.left = `${x}px`;
+                            clone.style.top = `${y}px`;
+                            clone.textContent = `Clone ${i + 1}`;
+                            document.body.appendChild(clone);
+                            button.disabled = true;
+                        }
+                        but.style.backgroundColor = "green";
+                    });
+            }
+        }
+    </script>
+    
+
+</div>
+</body>
+</html>

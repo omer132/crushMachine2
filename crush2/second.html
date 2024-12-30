@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Omer's Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        
+        .background-video {
+            pointer-events: none;
+            position: absolute;
+            top: -300px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+    
+        .baslik {
+            text-align: center;
+            margin-top: 300px;
+            width: 100%;
+            height: 10px;
+        }
+
+        
+        .h {
+            pointer-events: none;
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            top: -100px;
+            left: 100px;
+        }
+
+        .giphy-embed {
+            pointer-events: none;
+            width: 250px;
+            height: 200px;
+            position: absolute;
+            top: -50px;
+            left: 1200px;
+        }
+
+        .lobster {
+            font-family: 'Lobster';
+            font-size: 3em;
+            color: #d32f2f;
+        }
+
+        .tenor-gif-embed {
+            pointer-events: none;
+            width: 200px;
+            height: 200px;
+            position: fixed;
+            bottom: -100px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <video class="background-video" autoplay loop muted>
+        <source src="İsimsiz video ‐ Clipchamp ile yapıldı.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    
+    <div class="baslik">
+        <h2 class="lobster">I knew you would choose this :)</h2>
+    </div>
+
+    
+    <div class="h">
+        <iframe src="https://giphy.com/embed/qFmdpUKAFZ6rMobzzu" width="100%" height="100%" frameborder="0" allowFullScreen></iframe>
+    </div>
+
+    <div class="giphy-embed">
+        <iframe src="https://giphy.com/embed/Z21HJj2kz9uBG" width="100%" height="100%" frameborder="0" allowFullScreen></iframe>
+    </div>
+
+    <div class="tenor-gif-embed" data-postid="16028344" data-share-method="host" data-aspect-ratio="1.01911" data-width="100%">
+        <a href="https://tenor.com/view/kermit-kermit-love-kermit-hearts-in-love-gif-16028344"></a>
+    </div>
+
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+</body>
+</html>
